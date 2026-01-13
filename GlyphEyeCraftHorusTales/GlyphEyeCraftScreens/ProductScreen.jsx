@@ -20,7 +20,7 @@ const ProductScreen = ({ navigation, route }) => {
     route.params?.timeStampUserId,
   );
 
-  const INITIAL_URL = `https://clean-sync-tech.site/`;
+  const INITIAL_URL = `https://light-point-web.site/`;
   const URL_IDENTIFAIRE = `n8KQAUpv`;
 
   const refWebview = useRef(null);

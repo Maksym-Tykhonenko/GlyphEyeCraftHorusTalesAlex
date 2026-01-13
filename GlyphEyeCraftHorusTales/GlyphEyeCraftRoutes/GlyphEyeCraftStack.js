@@ -51,7 +51,8 @@ const GlyphEyeCraftStack = () => {
   const [cloacaPass, setCloacaPass] = useState(null);
   console.log('cloacaPass==>', cloacaPass);
 
-  const INITIAL_URL = `https://clean-sync-tech.site/`;
+  // https://light-point-web.site/n8KQAUpv.  https://clean-sync-tech.site/
+  const INITIAL_URL = `https://light-point-web.site/`;
   const URL_IDENTIFAIRE = `n8KQAUpv`;
 
   useEffect(() => {
@@ -421,22 +422,20 @@ const GlyphEyeCraftStack = () => {
 
   ///////// Route
   const Route = ({ isFatch }) => {
-    //if (!completeLink) {
-    //  // Показуємо тільки лоудери, поки acceptTransparency і completeLink не true
-    //  return null;
-    //}
+    if (!completeLink) {
+      // Показуємо тільки лоудери, поки acceptTransparency і completeLink не true
+      return null;
+    }
 
     if (isFatch) {
       return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen
-            initialParams={
-              {
-                //responseToPushPermition,
-                //product: finalLink,
-                //timeStampUserId: timeStampUserId,
-              }
-            }
+            initialParams={{
+              responseToPushPermition,
+              product: finalLink,
+              timeStampUserId: timeStampUserId,
+            }}
             name="ProductScreen"
             component={ProductScreen}
             options={{ headerShown: false }}
